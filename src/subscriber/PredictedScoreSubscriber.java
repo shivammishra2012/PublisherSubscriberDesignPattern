@@ -4,6 +4,8 @@ import publisher.Publisher;
 
 public class PredictedScoreSubscriber implements Subscriber{
 
+
+
     private int runs;
 
     private int wickets;
@@ -16,6 +18,8 @@ public class PredictedScoreSubscriber implements Subscriber{
 
     private final Publisher publisher;
 
+
+    // subsriber subsribes to one publisher as per this code will make it scalable
     public PredictedScoreSubscriber(Publisher publisher) {
         this.publisher = publisher;
     }
