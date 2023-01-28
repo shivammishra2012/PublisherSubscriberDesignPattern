@@ -44,11 +44,25 @@ public class CricketBoardPublisher implements Publisher {
 
         for(Subscriber subscriber:subscribers)
         {
-            subscriber.update(runs,wickets,overs);
+            subscriber.update();
         }
 
     }
 
+    @Override
+    public int getRuns() {
+        return runs;
+    }
+
+    @Override
+    public float getOvers() {
+        return overs;
+    }
+
+    @Override
+    public int getWickets() {
+        return wickets;
+    }
 
 
 }

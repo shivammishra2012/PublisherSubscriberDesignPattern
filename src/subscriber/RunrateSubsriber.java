@@ -20,10 +20,13 @@ public class RunrateSubsriber implements Subscriber{
     }
 
     @Override
-    public void update(int runs, int wickets, float overs) {
-        this.runs=runs;
-        this.wickets=wickets;
-        this.overs=overs;
+    public void update() {
+        // as per data is pulled from publisher as per requirement
+        //now  we have more flexibility to consume as per our reqyuirements
+
+        this.runs= publisher.getRuns();
+        this.wickets= publisher.getWickets();
+        this.overs= publisher.getOvers();
         // addition logic
         System.out.println(" RunrateSubsricber "+this.runs+" runs"+this.wickets+"wickets"+this.overs+"overs");
 

@@ -25,10 +25,11 @@ public class PredictedScoreSubscriber implements Subscriber{
     }
 
     @Override
-    public void update(int runs, int wickets, float overs) {
-        this.runs=runs;
-        this.wickets=wickets;
-        this.overs=overs;
+    public void update() {
+        // data is pulled
+        this.runs=publisher.getRuns();
+        //this.wickets=wickets;
+        //this.overs=overs;
         // addition logic
 
         System.out.println(" PredictedScoreSubsriber "+this.runs+" runs"+this.wickets+"wickets"+this.overs+"overs");

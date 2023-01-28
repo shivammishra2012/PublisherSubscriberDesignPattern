@@ -1,6 +1,7 @@
 package subscriber;
 
 public interface Subscriber {
+    // contarct
 
-    void update(int runs,int wickets,float overs);
+    void update();
 }
